@@ -1,0 +1,159 @@
+.post-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.post-list h2 {
+  color: #00704A;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+th {
+  background-color: #00704A;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+td a {
+  color: #00704A;
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+td .view-btn,
+td .edit-btn,
+td .delete-btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: white;
+  border-radius: 3px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+td .view-btn {
+  background-color: #007bff;
+}
+
+td .edit-btn {
+  background-color: #28a745;
+}
+
+td .delete-btn {
+  background-color: #dc3545;
+  border: none;
+}
+
+td .view-btn:hover,
+td .edit-btn:hover,
+td .delete-btn:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  td .view-btn,
+  td .edit-btn,
+  td .delete-btn {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  background-color: #00704A;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #005c3e;
+}
+
+.pagination span {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  td a {
+    display: block;
+    margin-bottom: 5px;
+  }
+}

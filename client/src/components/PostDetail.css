@@ -1,0 +1,109 @@
+.post-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.post-detail h2 {
+  color: #00704A;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #00704A;
+  padding-bottom: 0.5rem;
+}
+
+.post-detail .meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-detail .content {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.post-detail .content p {
+  margin-bottom: 1rem;
+}
+
+.post-detail .actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.post-detail .actions a,
+.post-detail .actions button {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.post-detail .edit-btn {
+  background-color: #00704A;
+  color: white;
+}
+
+.post-detail .delete-btn {
+  background-color: #d9534f;
+  color: white;
+}
+
+.post-detail .back-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.post-detail .actions a:hover,
+.post-detail .actions button:hover {
+  opacity: 0.8;
+}
+
+.post-detail.loading,
+.post-detail.error,
+.post-detail.not-found {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 2rem;
+}
+
+.post-detail.error {
+  color: #d9534f;
+}
+
+@media (max-width: 768px) {
+  .post-detail {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .post-detail h2 {
+    font-size: 1.5rem;
+  }
+
+  .post-detail .meta {
+    flex-direction: column;
+  }
+
+  .post-detail .actions {
+    flex-direction: column;
+  }
+
+  .post-detail .actions a,
+  .post-detail .actions button {
+    width: 100%;
+    text-align: center;
+  }
+}
