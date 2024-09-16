@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './PostList.css';
@@ -9,11 +9,7 @@ function PostList() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  useEffect(() => {
-    fetchPosts();
-  }, [currentPage, search]);
-
-  const fetchPosts = async () => {
+  const fetchPosts = useCallback(async () => {
     try {
       const res = await axios.get(`http://localhost:5000/api/posts?page=${currentPage}&search=${search}`);
       setPosts(res.data.posts);
@@ -21,7 +17,11 @@ function PostList() {
     } catch (error) {
       console.error('Error fetching posts:', error);
     }
-  };
+  }, [currentPage, search]);
+
+  useEffect(() => {
+    fetchPosts();
+  }, [fetchPosts]);
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
